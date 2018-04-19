@@ -1025,6 +1025,23 @@ function zeroPadding(num, digit) {
     return (zero + num).slice(-digit);
 };
 
+new Vue({
+    el: '#sudoku-demo',
+    data: {
+        cells: Array.apply(null, { length: 80 }).map(function (_, index) {
+            return {
+                id: index,
+                number: index % 9 + 1
+            };
+        })
+    },
+    methods: {
+        shuffle: function shuffle() {
+            this.cells = _.shuffle(this.cells);
+        }
+    }
+});
+
 /***/ }),
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {

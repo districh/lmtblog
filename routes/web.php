@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
+    return view('vuetest1');
+});
+
+Route::get('/lmt', function () {
     return view('index');
 });
