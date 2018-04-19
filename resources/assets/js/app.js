@@ -16,49 +16,20 @@ window.Vue = require('vue');
  */
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue'));
-import Hello from './components/Hello.vue'; // 引入Hello 组件
 
-
+// import Hello from './components/Hello.vue'; // 引入Hello 组件
 // const app = new Vue({
-//     el: '#app'
+//     el: '#app',
+//     render: h => h(Hello)
 // });
-const app = new Vue({
-    el: '#app',
-    render: h => h(Hello)
-});
-
-var app2 = new Vue({
-    el: '#app-2',
+//
+var avatar = new Vue({
+    el: '#avatar',
     data: {
-        message: '页面加载于 ' + new Date().toLocaleString()
+        message: 'On April 19, 2018, my lovely kid take the first step in life.'
     }
 });
 
-var app5 = new Vue({
-    el: '#app-5',
-    data: {
-        message: 'Hello Vue.js!'
-    },
-    methods: {
-        reverseMessage: function () {
-            this.message = this.message.split('').reverse().join('')
-        }
-    }
-});
-
-var app6 = new Vue({
-    el: '#app-6',
-    data: {
-        message: 'Hello Vue!'
-    }
-});
-
-new Vue({
-    el: '#example-3',
-    data: {
-        show: true
-    }
-});
 
 
 var clock = new Vue({
